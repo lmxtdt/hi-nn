@@ -18,6 +18,6 @@ The overall process is (currently)
 
 - select the best FLM architecture based on performance on validation data
 
-- evaluate the chosen FLM model (scripts need writing)
+- evaluate the chosen FLM model
 
 - in pair/, repeat steps 2-5 for the pairs models

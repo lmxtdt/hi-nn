@@ -1,3 +1,3 @@
 procPair: processes simulation data (produced and held in both/) into .npz files that have been formatted and modified for the pair models. Each script (processing 2400 simulations) takes about 4 minutes to run.
 
-trainPair: trains models over different parameters. (01 to 81 trains over layers1, layers2 = [1, 2, 4] and filters1, filters2 = [32, 64, 128])
+trainPair: trains models over different parameters. (01 to 81 trains over layers1, layers2 = [1, 2, 4] and filters1, filters2 = [32, 64, 128]. 101 to 120 trains over batchSize = [72, 144, 288, 576] and learnRate = [1e-3, 5e-3, 1e-4, 5e-4, 1e-5]. 201 to 279 trains over layers2 = [4, 6, 8] and filters2 = [128, 192, 256]. 201-279 train the same models for 200 epochs, as opposed to previous rounds of training which create new models and run for 25 epochs.)

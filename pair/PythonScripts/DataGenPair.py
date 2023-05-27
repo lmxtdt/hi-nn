@@ -51,6 +51,9 @@ class PairGen(tf.keras.utils.Sequence):
 		#if this is the first file opened
 		if(firstFile):
 			self.updateInternal()
+			print("{} files, {} samples per file".format(
+				len(self.npzFiles),
+				self.samplesPerFile))
 		
 		#adjust data as desired
 		self.adjustCurr()

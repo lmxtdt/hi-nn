@@ -2,10 +2,10 @@
 Miscellaneous functions that do not belong in any particular folder.
 
 Created August 17, 2022
-Last edited August 17, 2022
+Last edited August 19, 2022
 """
 
-def getArgsBase(argv, argOrder = [], boolKeys = [], intKeys = [], floatKey = []):
+def getArgsBase(argv, argOrder = [], boolKeys = [], intKeys = [], floatKeys = []):
 	"""Get arguments from the command line and return them as a dictionary.
 
 	parameters:
@@ -15,9 +15,9 @@ def getArgsBase(argv, argOrder = [], boolKeys = [], intKeys = [], floatKey = [])
 	intKeys: "" for arguments that should be ints
 	floatKeys: "" for arguments that should be floats
 	"""
-	if(len(argv) != len(argOrder)):
+	if(len(argv) != len(argOrder) + 1):
 		raise Exception("length of argv "
-			"({}) and length of argOrder ({}) not equal.".format(
+			"({}) and length of argOrder ({}) + 1 not equal.".format(
 				len(argv), len(argOrder)))
 
 	args = {}

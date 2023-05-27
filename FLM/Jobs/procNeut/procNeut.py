@@ -9,7 +9,7 @@ template = """#!/bin/bash -l
 #SBATCH --output={abbr}{num}.out
 #SBATCH --error={abbr}{num}.err
 
-cd ~/DMI/both/PythonScripts || exit
+cd ~/DMI/both || exit
 
 conda activate ML || exit
 
@@ -19,20 +19,17 @@ conda deactivate
 
 """
 
-#NOTE: For some reason, the version on MSI actually sets the working directory
-#to just both/ and the other path names are adjusted accordingly.
-
-abbr = "flmPr"
+abbr = "flmNPr"
 
 num = 1 #
 
-for i in range(50):
+for i in range(10):
     numFormatted = "{:02}".format(num)
 
     #various output paths
-    simInfo = "../Sims/sim/s_{}.csv".format(numFormatted)
-    npzOut = "../../FLM/SimData/npz/n_{}.npz".format(numFormatted)
-    metaOut = "../../FLM/SimData/meta/m_{}.csv".format(numFormatted)
+    simInfo = "NeutSims/sim/s_{}.csv".format(numFormatted)
+    npzOut = "../FLM/NeutData/npz/n_{}.npz".format(numFormatted)
+    metaOut = "../FLM/NeutData/meta/m_{}.csv".format(numFormatted)
 
 
     #write the file and save it

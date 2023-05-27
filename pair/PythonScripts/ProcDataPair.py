@@ -5,10 +5,8 @@ ProcDataPair
 
 Extracts all pairs from a simulations and an equal number of false pairs.
 
-NEED TO CHECK IT WORKS, for both ragged & not
-
 Created August 17, 2022
-Last edited August 17, 2022
+Last edited August 19, 2022
 """
 from sys import argv
 import numpy as np
@@ -30,11 +28,13 @@ class IndAncestry:
 		self.loadFiles()
 		self.pickLoci()
 		self.pickPairs()
+		self.pickInds()
 		self.gatherLoci()
 
 	def loadFiles(self):
+		"""Read files of individual ancestry and incompatibility positions."""
 		#read compressed individual ancestry
-		self.ind = decompress(self.indPath)
+		self.ind = decompress(self.indPath, False)
 
 		#read positions
 		posRows = []
@@ -46,14 +46,17 @@ class IndAncestry:
 				posRows.append(row)
 		#save positions
 		self.pos = np.array(posRows, dtype = int)
-
+		
 		#save number of individuals
-		self.n = len(indRows)
+		self.n = self.ind.shape[0]
 
 	def pickLoci(self):
-		#to find loci not involved in incompatibilities
-		#calculate chisquared values over genome
-		#and pick regions with the lowest p-values
+		"""Choose fake loci (not in any incompatibilities) to be used for
+		false pairs."""
+		#To find loci not involved in incompatibilities, but which could be
+		#identified as possibly being in an incompatibility, chi-squared tests
+		#are run over the genome, and regions with the lowest p-values are
+		#chosen
 
 		#calculate chi-squared
 		sumHomo1 = np.sum(self.ind == 0, axis = 0)
@@ -259,6 +262,8 @@ with open(inputCSV, "r") as cfile:
 		#read the row
 		seed = int(row[0])
 		indPath = row[2]
+		#adjust indPath to be the proper .npz file
+		indPath = indPath.rsplit(".", 1)[0] + ".npz"
 		posPath = row[5]
 
 		print("analyzing {}...".format(indPath), flush = True)

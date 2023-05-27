@@ -16,9 +16,6 @@ from sys import argv
 from ModelFLM import FlmBuilder
 from DataGenFLM import ChrGen
 
-#note: need to adjust sys.path to get to MiscFuncs.
-#or just keep a copy of it in every PythonScripts folder
-#which is less elegant but just as annoying to maintain
 from MiscFuncs import getArgsBase
 
 def getArgs(argv):
@@ -31,7 +28,8 @@ def getArgs(argv):
 
 	boolKeys = ["load"]
 
-	intKeys = ["kernel1", "kernel2", "filters1", "filters2",
+	intKeys = ["kernel1", "kernel2", "kernel3",
+				"filters1", "filters2", "filters3",
 				"epochs", "batchSize", "version"]
 
 	floatKeys = ["learnRate"]

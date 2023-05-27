@@ -5,8 +5,6 @@ DataGenFLM
 
 Defines several data generators for the FindLociModels
 
-NEED TO CHECK THAT IT WORKS
-
 Created August 17, 2022
 Last edited August 17, 2022
 """
@@ -81,10 +79,9 @@ class ChrGen(tf.keras.utils.Sequence):
 		if(firstFile):
 			#update internal stats
 			self.updateInternal()
-			print(("samplesPerFile: {}, batchSize: {}"
-					"y dim: {}, x dim: {}").format(
-						self.samplesPerFile, self.batchSize, 
-						self.currY.shape, self.currX.shape))
+			print("{} files, {} samples per file".format(
+						len(self.npzFiles),
+						self.samplesPerFile))
 		
 		self.adjustCurr()
 		

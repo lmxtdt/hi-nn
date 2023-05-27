@@ -6,10 +6,8 @@ Process simulation information and writes to two output files:
 	an .npz file that contains X, Y, and meta used by the evaluation scripts
 	a .csv file that contains additional meta about each incompatibility locus
 	
-NEED TO CHECK THAT IT WORKS
-
 Created August 5, 2022
-Last edited August 18, 2022
+Last edited August 19, 2022
 """
 
 from sys import argv
@@ -224,8 +222,10 @@ with open(inputCSV, "r") as cfile:
 		#read the row
 		
 		seed = int(row[0])
-		simName = row[1]
-		print("analyzing {}...".format(simName), flush = True)
+		popPath = row[1]
+		#modify population path so it ends in .npz rather than .csv
+		popPath = popPath.rsplit(".", 1)[0] + ".npz"
+		print("analyzing {}...".format(popPath), flush = True)
 		#ancIndName = row[2]
 		#saveIndData = row[3]
 		fitName = row[4]
@@ -249,7 +249,7 @@ with open(inputCSV, "r") as cfile:
 		p = np.array(p).astype(int)
 		
 		#read the tree, get stats
-		am = AncestryMatrix(simName, numChr, seed)
+		am = AncestryMatrix(popPath, numChr, seed)
 		am.calcYLoc(f, p)
 		x = am.getX()
 		y = am.getY()
@@ -265,7 +265,7 @@ with open(inputCSV, "r") as cfile:
 		metaOut.append(realMeta)
 		
 #save all input and outputs to a compressed .npz file
-np.savez(outNPZ,
+np.savez_compressed(outNPZ,
 		  	x = np.array(xArr),
 			y = np.array(yArr),
 			chi = np.array(cArr),

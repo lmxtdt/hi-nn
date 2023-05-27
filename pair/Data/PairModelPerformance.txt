@@ -1,0 +1,83 @@
+The models, select by best cross entropy
+They were trained over 200 epochs, in batches of 25 epochs. The performance on validation data after each 25-epoch chunk is given here.
+2_1:
+binary crossentropy: 0.4508483409881592, binary accuracy: 0.7898842692375183
+binary crossentropy: 0.4316425621509552, binary accuracy: 0.8035069704055786
+binary crossentropy: 0.4206872582435608, binary accuracy: 0.809432864189148
+binary crossentropy: 0.41752302646636963, binary accuracy: 0.8110532164573669
+binary crossentropy: 0.4156436324119568, binary accuracy: 0.8122106194496155
+binary crossentropy: 0.41607892513275146, binary accuracy: 0.8118749856948853
+binary crossentropy: 0.41459596157073975, binary accuracy: 0.8122974634170532 - BEST
+binary crossentropy: 0.41504377126693726, binary accuracy: 0.811718761920929
+2_2:
+binary crossentropy: 0.4400278627872467, binary accuracy: 0.7982175946235657
+binary crossentropy: 0.43689361214637756, binary accuracy: 0.7997395992279053
+binary crossentropy: 0.4226107597351074, binary accuracy: 0.806643545627594
+binary crossentropy: 0.4176919758319855, binary accuracy: 0.8097859025001526
+binary crossentropy: 0.4235600233078003, binary accuracy: 0.8077141046524048
+binary crossentropy: 0.4167419970035553, binary accuracy: 0.8112268447875977
+binary crossentropy: 0.4131692051887512, binary accuracy: 0.8125810027122498 - BEST
+binary crossentropy: 0.41699734330177307, binary accuracy: 0.8096469640731812
+2_3:
+binary crossentropy: 0.4249861240386963, binary accuracy: 0.8071411848068237
+binary crossentropy: 0.41753512620925903, binary accuracy: 0.8106192350387573
+binary crossentropy: 0.4165354073047638, binary accuracy: 0.8103761672973633
+binary crossentropy: 0.415283739566803, binary accuracy: 0.8116377592086792
+binary crossentropy: 0.418326199054718, binary accuracy: 0.808894693851471
+binary crossentropy: 0.4131461977958679, binary accuracy: 0.8140740990638733 - BEST
+binary crossentropy: 0.41335204243659973, binary accuracy: 0.8142187595367432
+binary crossentropy: 0.41424673795700073, binary accuracy: 0.8135474324226379
+2_4:
+binary crossentropy: 0.4475017189979553, binary accuracy: 0.7925983667373657
+binary crossentropy: 0.4228668808937073, binary accuracy: 0.809016227722168
+binary crossentropy: 0.41955137252807617, binary accuracy: 0.8094386458396912
+binary crossentropy: 0.41665130853652954, binary accuracy: 0.8112037181854248
+binary crossentropy: 0.4154755771160126, binary accuracy: 0.8126620650291443
+binary crossentropy: 0.4137113094329834, binary accuracy: 0.8132349252700806
+binary crossentropy: 0.41354918479919434, binary accuracy: 0.8128819465637207 - BEST
+binary crossentropy: 0.4138864576816559, binary accuracy: 0.8134143352508545
+2_5:
+binary crossentropy: 0.4385015666484833, binary accuracy: 0.8002025485038757
+binary crossentropy: 0.41899338364601135, binary accuracy: 0.8099710941314697
+binary crossentropy: 0.4150978922843933, binary accuracy: 0.8119328618049622
+binary crossentropy: 0.4211009442806244, binary accuracy: 0.8075346946716309
+binary crossentropy: 0.4130537509918213, binary accuracy: 0.8128992915153503 - BEST OVERALL
+binary crossentropy: 0.4139859974384308, binary accuracy: 0.8131250143051147
+binary crossentropy: 0.4147360026836395, binary accuracy: 0.8130613565444946
+binary crossentropy: 0.41885679960250854, binary accuracy: 0.81229168176651
+2_6:
+binary crossentropy: 0.430610716342926, binary accuracy: 0.8025463223457336
+binary crossentropy: 0.41742563247680664, binary accuracy: 0.8099305629730225
+binary crossentropy: 0.41699087619781494, binary accuracy: 0.8101504445075989
+binary crossentropy: 0.4205267131328583, binary accuracy: 0.8092592358589172
+binary crossentropy: 0.41569066047668457, binary accuracy: 0.8126157522201538 - BEST
+binary crossentropy: 0.418558806180954, binary accuracy: 0.8116493225097656
+binary crossentropy: 0.4256109893321991, binary accuracy: 0.8100405335426331
+binary crossentropy: 0.4342447519302368, binary accuracy: 0.8084375262260437
+2_7:
+binary crossentropy: 0.4296356439590454, binary accuracy: 0.8039930462837219
+binary crossentropy: 0.42320719361305237, binary accuracy: 0.8085300922393799
+binary crossentropy: 0.41756439208984375, binary accuracy: 0.8109433054924011
+binary crossentropy: 0.4179636836051941, binary accuracy: 0.8107638955116272
+binary crossentropy: 0.4140612483024597, binary accuracy: 0.8127661943435669 - BEST
+binary crossentropy: 0.41440579295158386, binary accuracy: 0.8130671381950378
+binary crossentropy: 0.4175633490085602, binary accuracy: 0.8111226558685303
+binary crossentropy: 0.4205317795276642, binary accuracy: 0.8100867867469788
+2_8:
+binary crossentropy: 0.4312772750854492, binary accuracy: 0.8048900365829468
+binary crossentropy: 0.4179624617099762, binary accuracy: 0.8102198839187622
+binary crossentropy: 0.4175131022930145, binary accuracy: 0.8104861378669739
+binary crossentropy: 0.4153148829936981, binary accuracy: 0.8123263716697693 - BEST
+binary crossentropy: 0.4158925712108612, binary accuracy: 0.8121007084846497
+binary crossentropy: 0.4179835915565491, binary accuracy: 0.812829852104187
+binary crossentropy: 0.42574793100357056, binary accuracy: 0.8099768757820129
+binary crossentropy: 0.43637198209762573, binary accuracy: 0.8075694441795349
+2_9:
+binary crossentropy: 0.42350316047668457, binary accuracy: 0.8076909780502319
+binary crossentropy: 0.4171532392501831, binary accuracy: 0.8103529810905457
+binary crossentropy: 0.4136899709701538, binary accuracy: 0.8128530383110046 - BEST
+binary crossentropy: 0.4156546890735626, binary accuracy: 0.8134375214576721
+binary crossentropy: 0.42442649602890015, binary accuracy: 0.8088772892951965
+binary crossentropy: 0.43769803643226624, binary accuracy: 0.8093055486679077
+binary crossentropy: 0.45735809206962585, binary accuracy: 0.8032407164573669
+binary crossentropy: 0.5052798390388489, binary accuracy: 0.7972396016120911
